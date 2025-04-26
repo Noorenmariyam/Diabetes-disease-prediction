@@ -12,13 +12,28 @@ Created on Sun Apr 20 16:11:15 2025
 @author: user
 """
 
+import streamlit as st
+import pickle
+import requests
+import os
+
+# Download the model file from GitHub
+url = "https://github.com/Noorenmariyam/Diabetes-disease-prediction/raw/main/trained_model%20%282%29.sav"  # Replace with actual raw link
+response = requests.get(url, stream=True)
+with open("trained_model.sav", "wb") as f:
+    f.write(response.content)
+
+# Load the model
+loaded_model = pickle.load(open("trained_model.sav", "rb"))
+
+# Continue with your Streamlit app logic...
+st.title("Diabetes Prediction App")
+# Add your input fields, prediction logic, etc.
+
 import numpy as np
 import pickle
 import streamlit as st
 
-
-# loading the saved model
-loaded_model = pickle.load(open('C:/Users/user/OneDrive/Documents/DIABETES/trained_model (2).sav', 'rb'))
 
 
 # creating a function for Prediction
