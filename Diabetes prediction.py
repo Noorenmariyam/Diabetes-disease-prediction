@@ -2,15 +2,10 @@
 """
 Created on Sat Apr 26 13:44:57 2025
 
-@author: user
+@author: Nooren Mariyam
 """
+
 
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Apr 20 16:11:15 2025
-
-@author: user
-"""
 
 import streamlit as st
 import pickle
