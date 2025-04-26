@@ -18,6 +18,14 @@ import requests
 import os
 import sklearn
 print("Scikit-learn is installed!")  # If you see this message in logs, it's installed
+import subprocess
+import sys
+
+# Force install scikit-learn (fix for Streamlit Cloud issues)
+subprocess.run([sys.executable, "-m", "pip", "install", "--upgrade", "scikit-learn"])
+
+import sklearn
+print("Scikit-learn installed successfully!")
 
 # Download the model file from GitHub
 url = "https://github.com/Noorenmariyam/Diabetes-disease-prediction/raw/main/trained_model%20%282%29.sav"  # Replace with actual raw link
