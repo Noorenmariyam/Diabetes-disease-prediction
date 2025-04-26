@@ -32,7 +32,6 @@ with open("trained_model.sav", "wb") as f:
 loaded_model = pickle.load(open("trained_model.sav", "rb"))
 
 # Continue with your Streamlit app logic...
-st.title("Diabetes Prediction App")
 # Add your input fields, prediction logic, etc.
 
 import numpy as np
